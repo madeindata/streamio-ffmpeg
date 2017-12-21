@@ -5,16 +5,18 @@ module FFMPEG
     end
 
     def params_order(k)
-      if k =~ /watermark$/
+      if k =~ /threads/
         0
-      elsif k =~ /watermark/
+      elsif k =~ /watermark$/
         1
-      elsif k =~ /codec/
+      elsif k =~ /watermark/
         2
-      elsif k =~ /preset/
+      elsif k =~ /codec/
         3
-      else
+      elsif k =~ /preset/
         4
+      else
+        5
       end
     end
 
